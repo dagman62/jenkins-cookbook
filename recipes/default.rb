@@ -10,7 +10,7 @@ if platform == "centos" || platform == "fedora"
     code <<-EOH
     setsebool -P httpd_can_network_relay 1
     setsebool -P httpd_can_network_connect 1
-    setsebool -P httpd_can_network_connect_db
+    setsebool -P httpd_can_network_connect_db 1
     setsebool -P allow_user_mysql_connect 1
     touch /tmp/setsebool
     EOH
